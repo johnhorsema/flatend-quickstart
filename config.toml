@@ -1,0 +1,13 @@
+addr = "127.0.0.1:9000"
+
+[[http]]
+https = false
+addr = ":8080"
+
+[http.max]
+header_size = 1048576
+body_size = 1048576
+
+[[http.routes]]
+path = "GET /"
+service = "index"
